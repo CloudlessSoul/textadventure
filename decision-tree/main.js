@@ -12,7 +12,7 @@ const dialogueTree = new Dialogue(conversation);
 let validOptions = [];
 
 function readCommand(onlyProvideOptions = false) {
-    const question = onlyProvideOptions ? createOptions() : dialogueTree.getResponse + createOptions()
+    const question = onlyProvideOptions ? createOptions() : dialogueTree.getResponse() + createOptions()
     rl.question(question, function (answerIndex) {
         if (!validOptions.includes(answerIndex.toString())) {
             rl.write(`\n\'${answerIndex}' is not a valid answer.\n\n`);
