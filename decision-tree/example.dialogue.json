@@ -1,0 +1,35 @@
+{
+    "response": "Hello! What a glorious day!",
+    "answers": [
+        {
+            "answer": "Isn't it?",
+            "response": "So, how may I help you?",
+            "answers": [
+                {
+                    "answer": "I'm looking for the king",
+                    "response": "The king? What do you want with him, pray tell?",
+                    "answers": [
+                        {
+                            "answer": "I'm here to assasinate him",
+                            "response": "Is that so? Then prepare to fight!",
+                            "answers": null,
+                            "result": "FIGHT"
+                        },
+                        {
+                            "answer": "None of your business you nosey fool",
+                            "response": "As the king's guard it very much is my business. Now tell me what you're here for!",
+                            "answers": [
+                                {
+                                    "answer": "Stand aside! I'm here to assasinate him",
+                                    "response": "Not if I have anything to do with it. Prepare to fight!",
+                                    "answers": null,
+                                    "result": "FIGHT"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
