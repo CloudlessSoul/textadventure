@@ -9,13 +9,21 @@ const rl = readline.createInterface({
 });
 
 const dialogueTree = new Dialogue(conversation);
+let validOptions = [];
 
-function readCommand() {
-    rl.question(dialogueTree.getResponse() + createOptions(), function (answerIndex) {
+function readCommand(onlyProvideOptions = false) {
+    const question = onlyProvideOptions ? createOptions() : dialogueTree.getResponse + createOptions()
+    rl.question(question, function (answerIndex) {
+        if (!validOptions.includes(answerIndex.toString())) {
+            rl.write(`\n\'${answerIndex}' is not a valid answer.\n\n`);
+            readCommand(true);
+            return;
+        }
         const dialogueEnd = !!dialogueTree.chooseAnswer(answerIndex);
 
         if (dialogueEnd) {
             rl.write(dialogueTree.getResponse());
+            rl.write("\n");
             rl.close();
         } else {
             readCommand();
@@ -26,10 +34,12 @@ function readCommand() {
 function createOptions() {
     let options = "\nYour options are: ";
     const answers = dialogueTree.getAvailableAnswers();
+    validOptions = [];
     for (let i = 0; i < answers.length; i++) {
+        validOptions.push(i.toString());
         options = options.concat(`\n[${i}] ${answers[i]}`);
     }
-    options = options.concat("\n > ");
+    options = options.concat("\n> ");
     return options;
 }
 readCommand();
