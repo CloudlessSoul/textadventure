@@ -1,35 +1,35 @@
 {
-    "response": "Hello! What a glorious day!",
+    "response": "Welcome to the Enterprise! I will be your mentor as you join the ranks of Starfleet. Tell me, what race are you?",
     "answers": [
         {
-            "answer": "Isn't it?",
-            "response": "So, how may I help you?",
-            "answers": [
-                {
-                    "answer": "I'm looking for the king",
-                    "response": "The king? What do you want with him, pray tell?",
-                    "answers": [
-                        {
-                            "answer": "I'm here to assasinate him",
-                            "response": "Is that so? Then prepare to fight!",
-                            "answers": null,
-                            "result": "FIGHT"
-                        },
-                        {
-                            "answer": "None of your business you nosey fool",
-                            "response": "As the king's guard it very much is my business. Now tell me what you're here for!",
-                            "answers": [
-                                {
-                                    "answer": "Stand aside! I'm here to assasinate him",
-                                    "response": "Not if I have anything to do with it. Prepare to fight!",
-                                    "answers": null,
-                                    "result": "FIGHT"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "answer": "I am Human",
+            "response": "Ah, a fellow human. I should have recognised that.",
+            "answers": [{
+                "answer": "So, where are my quarters?",
+                "response": "Patience. First I need you to report to the captain. Please report to the bridge",
+                "answers": []
+            },
+            {
+                "answer": "Who's the captain here?",
+                "response": "Captain Picard. Please report to him immediately.",
+                "answers": []
+            }]
+        },
+
+        {
+            "answer": "I am Klingon",
+            "response": "I see. Well, that makes you the second Klingon in Starfleet, after Captain Worf of course.",
+            "answers": []
+        },
+        {
+            "answer": "I am Ferengi",
+            "response": "Who did you bribe to get into Starfleet. Are you sure you're Starfleet material?",
+            "answers": []
+        },
+        {
+            "answer": "I am Vulcan",
+            "response": "I should have deduced that. Welcome aboard.",
+            "answers": []
         }
     ]
 }
